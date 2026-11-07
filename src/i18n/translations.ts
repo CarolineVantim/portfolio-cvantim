@@ -109,7 +109,7 @@ const pt: Dictionary = {
     paragraphs: [
       "Sou a Caroline, QA Engineer com foco em garantir software de alta qualidade através de estratégias eficientes de testes manuais, automatizados e integração contínua. Tenho experiência prática em testes de aplicações Web, Mobile e APIs REST, além de atuação direta na definição de fluxos de teste e melhoria de processos de qualidade em times ágeis.",
       "Minha bagagem prévia como desenvolvedora (PHP e Golang) me dá um perfil técnico e analítico apurado: entendo a arquitetura, analiso o código e sei exatamente onde o software tende a falhar, o que facilita a comunicação com os times de engenharia.",
-      "Atualmente, aplico e aprimoro continuamente práticas de BDD (Behavior-Driven Development) para aproximar as regras de negócio da automação de testes, além de consolidar esteiras de CI/CD para acelerar entregas, aumentar a cobertura de testes e reduzir o tempo de feedback nos ciclos de desenvolvimento.",
+      "No dia a dia, trabalho com foco em Shift Left: mapeio regras de negócio e antecipo cenários de falha desde as fases iniciais do desenvolvimento, para que os problemas sejam evitados, e não apenas encontrados. Desenvolvo e mantenho testes automatizados na camada de API e produzo documentação técnica e funcional que serve de referência para os times de produto e engenharia.",
     ],
     stats: [
       { value: "6+", label: "anos de mercado de TI" },
@@ -300,7 +300,7 @@ const en: Dictionary = {
     paragraphs: [
       "I'm Caroline, a QA Engineer focused on ensuring high-quality software through efficient manual testing, automation, and continuous integration strategies. I have hands-on experience testing Web, Mobile, and REST API applications, as well as direct involvement in defining test flows and improving quality processes within agile teams.",
       "My previous background as a developer (PHP and Golang) gives me a sharp technical and analytical mindset: I understand the architecture, analyze the code, and know exactly where software tends to fail — which makes communication with engineering teams much easier.",
-      "I currently apply and continuously refine BDD (Behavior-Driven Development) practices to bring business rules closer to test automation, alongside consolidating CI/CD pipelines to speed up delivery, increase test coverage, and reduce feedback time across development cycles.",
+      "Day to day, I work with a Shift Left mindset: I map business rules and anticipate failure scenarios from the earliest stages of development, so problems are prevented rather than just found. I build and maintain automated tests at the API layer and produce technical and functional documentation that serves as a reference for product and engineering teams.",
     ],
     stats: [
       { value: "6+", label: "years in the IT industry" },
@@ -491,7 +491,7 @@ const it: Dictionary = {
     paragraphs: [
       "Sono Caroline, una QA Engineer concentrata nel garantire software di alta qualità attraverso strategie efficienti di test manuali, automatizzati e integrazione continua. Ho esperienza pratica nei test di applicazioni Web, Mobile e API REST, oltre a un coinvolgimento diretto nella definizione dei flussi di test e nel miglioramento dei processi di qualità in team agili.",
       "La mia precedente esperienza come sviluppatrice (PHP e Golang) mi offre un profilo tecnico e analitico solido: comprendo l'architettura, analizzo il codice e so esattamente dove il software tende a fallire, il che facilita la comunicazione con i team di ingegneria.",
-      "Attualmente applico e perfeziono continuamente pratiche di BDD (Behavior-Driven Development) per avvicinare le regole di business all'automazione dei test, oltre a consolidare pipeline CI/CD per velocizzare le consegne, aumentare la copertura dei test e ridurre i tempi di feedback nei cicli di sviluppo.",
+      "Nel lavoro quotidiano adotto un approccio Shift Left: mappo le regole di business e anticipo gli scenari di errore fin dalle prime fasi dello sviluppo, così che i problemi vengano prevenuti e non solo individuati. Sviluppo e mantengo test automatizzati a livello di API e produco documentazione tecnica e funzionale che fa da riferimento per i team di prodotto e ingegneria.",
     ],
     stats: [
       { value: "6+", label: "anni nel settore IT" },
