@@ -15,13 +15,14 @@ export default function Education() {
         {t.education.items.map((item) => (
           <li
             key={`${item.school}-${item.degree}`}
-            className="flex flex-col gap-1 border-b border-border pb-6 last:border-none sm:flex-row sm:items-baseline sm:justify-between"
+            className="border-b border-border pb-6 last:border-none"
           >
-            <div>
-              <p className="font-semibold">{item.school}</p>
-              <p className="text-sm text-muted">{item.degree}</p>
+            <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+              <h3 className="text-lg font-semibold">{item.degree}</h3>
+              <span className="shrink-0 text-sm text-muted">{item.period}</span>
             </div>
-            <span className="text-sm text-muted">{item.period}</span>
+            <p className="text-sm font-medium text-accent">{item.school}</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
           </li>
         ))}
       </ul>

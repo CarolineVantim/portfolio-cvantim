@@ -71,7 +71,7 @@ export interface Dictionary {
   };
   education: {
     title: string;
-    items: { school: string; degree: string; period: string }[];
+    items: { school: string; degree: string; period: string; description: string }[];
   };
   contact: {
     title: string;
@@ -237,18 +237,30 @@ const pt: Dictionary = {
         school: "Fatec Araras — Antonio Brambilla",
         degree: "Curso Superior de Tecnologia (CST), Desenvolvimento de Software para Multiplataforma",
         period: "2021 — 2025",
+        description:
+          "Graduação tecnológica com foco no desenvolvimento de aplicações web, mobile e em nuvem, passando por engenharia de software, banco de dados e qualidade de software.",
       },
       {
         school: "Etec Prefeito Alberto Feres",
         degree: "Técnico em Desenvolvimento de Sistemas",
         period: "2019 — 2020",
+        description:
+          "Curso técnico em lógica de programação, desenvolvimento de sistemas, modelagem de banco de dados e análise de requisitos.",
       },
       {
         school: "Etec Prefeito Alberto Feres",
         degree: "Técnico em Informática para Internet",
         period: "2018 — 2019",
+        description:
+          "Meu primeiro contato com a área de TI: desenvolvimento web (HTML, CSS e JavaScript), design de interfaces e fundamentos de programação.",
       },
-      { school: "AEHDA", degree: "Profissionalizante, Gestão de Qualidade", period: "2016" },
+      {
+        school: "AEHDA",
+        degree: "Profissionalizante, Gestão de Qualidade",
+        period: "2016",
+        description:
+          "Fundamentos de gestão da qualidade, como melhoria contínua (PDCA), padronização de processos e controle de qualidade, base que hoje aplico em QA de software.",
+      },
     ],
   },
   contact: {
@@ -416,18 +428,30 @@ const en: Dictionary = {
         school: "Fatec Araras — Antonio Brambilla",
         degree: "Associate Degree in Technology (CST), Multiplatform Software Development",
         period: "2021 — 2025",
+        description:
+          "Technology degree focused on building web, mobile and cloud applications, covering software engineering, databases and software quality.",
       },
       {
         school: "Etec Prefeito Alberto Feres",
         degree: "Technical Degree in Systems Development",
         period: "2019 — 2020",
+        description:
+          "Technical program covering programming logic, systems development, database modeling and requirements analysis.",
       },
       {
         school: "Etec Prefeito Alberto Feres",
         degree: "Technical Degree in Internet Computing",
         period: "2018 — 2019",
+        description:
+          "My first step into IT: web development (HTML, CSS and JavaScript), interface design and programming fundamentals.",
       },
-      { school: "AEHDA", degree: "Vocational Training, Quality Management", period: "2016" },
+      {
+        school: "AEHDA",
+        degree: "Vocational Training, Quality Management",
+        period: "2016",
+        description:
+          "Quality management fundamentals such as continuous improvement (PDCA), process standardization and quality control, a foundation I now apply to software QA.",
+      },
     ],
   },
   contact: {
@@ -595,18 +619,30 @@ const it: Dictionary = {
         school: "Fatec Araras — Antonio Brambilla",
         degree: "Laurea Tecnologica (CST), Sviluppo Software Multipiattaforma",
         period: "2021 — 2025",
+        description:
+          "Laurea tecnologica incentrata sullo sviluppo di applicazioni web, mobile e cloud, con ingegneria del software, database e qualità del software.",
       },
       {
         school: "Etec Prefeito Alberto Feres",
         degree: "Diploma Tecnico in Sviluppo di Sistemi",
         period: "2019 — 2020",
+        description:
+          "Corso tecnico su logica di programmazione, sviluppo di sistemi, modellazione di database e analisi dei requisiti.",
       },
       {
         school: "Etec Prefeito Alberto Feres",
         degree: "Diploma Tecnico in Informatica per Internet",
         period: "2018 — 2019",
+        description:
+          "Il mio primo passo nell'IT: sviluppo web (HTML, CSS e JavaScript), design di interfacce e fondamenti di programmazione.",
       },
-      { school: "AEHDA", degree: "Corso Professionalizzante, Gestione della Qualità", period: "2016" },
+      {
+        school: "AEHDA",
+        degree: "Corso Professionalizzante, Gestione della Qualità",
+        period: "2016",
+        description:
+          "Fondamenti di gestione della qualità, come miglioramento continuo (PDCA), standardizzazione dei processi e controllo qualità, una base che oggi applico al QA del software.",
+      },
     ],
   },
   contact: {
