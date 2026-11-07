@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --foreground: #0f172a;
+  --muted: #475569;
+  --border: #e2e8f0;
+  --accent: #0d9488;
+  --accent-foreground: #ffffff;
+  --navy: #0f172a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-navy: var(--navy);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b1220;
+    --surface: #111a2e;
+    --foreground: #e2e8f0;
+    --muted: #94a3b8;
+    --border: #1e293b;
+    --accent: #2dd4bf;
+    --accent-foreground: #06201c;
+    --navy: #0b1220;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-photo-swiper {
+  padding-top: 24px;
+  padding-bottom: 44px;
+}
+
+.hero-photo-swiper .swiper-pagination-bullet {
+  background: var(--muted);
+  opacity: 0.5;
+}
+
+.hero-photo-swiper .swiper-pagination-bullet-active {
+  background: var(--accent);
+  opacity: 1;
+}
