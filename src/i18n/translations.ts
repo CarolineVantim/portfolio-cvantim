@@ -67,7 +67,11 @@ export interface Dictionary {
   projects: {
     title: string;
     subtitle: string;
+    casesTitle: string;
     items: { title: string; description: string; tags: string[] }[];
+    reposTitle: string;
+    repoLinkLabel: string;
+    repos: { title: string; description: string; tags: string[]; url: string }[];
   };
   education: {
     title: string;
@@ -208,7 +212,8 @@ const pt: Dictionary = {
   projects: {
     title: "Projetos & cases",
     subtitle:
-      "Destaques da minha atuação em qualidade. Cases mais detalhados (planos de teste, evidências, métricas) podem ser adicionados aqui conforme forem documentados.",
+      "Destaques da minha atuação em qualidade e projetos práticos com código aberto.",
+    casesTitle: "Na prática profissional",
     items: [
       {
         title: "Automação de testes de API",
@@ -227,6 +232,24 @@ const pt: Dictionary = {
         description:
           "Experiência prática combinando testes manuais e de API em sistemas web e mobile na ESL Sistemas, unindo conhecimento de suporte N2 com análise crítica de bugs.",
         tags: ["Teste Manual", "Teste de API", "Bug Analysis"],
+      },
+    ],
+    reposTitle: "Projetos no GitHub",
+    repoLinkLabel: "Ver repositório",
+    repos: [
+      {
+        title: "Regressão visual com BackstopJS",
+        description:
+          "POC para avaliar se o BackstopJS atende uma squad com muita validação visual. Além da suíte da aplicação rodando no CI, montei um laboratório com 14 mudanças controladas para medir recall, precisão e alarmes falsos. Resultado: zero falsos positivos, a recomendação de capturar por componente (9/11 regressões detectadas, contra 6/11 da página inteira) e a descoberta de um ponto cego em mudanças sutis de cor.",
+        tags: ["BackstopJS", "Regressão Visual", "Docker", "GitHub Actions"],
+        url: "https://github.com/CarolineVantim/Visual-Regression-Test",
+      },
+      {
+        title: "Sistema Clínico",
+        description:
+          "Aplicativo e API para uma instituição que atende crianças com deficiência física e motora, centralizando atendimentos com fotos e vídeos para as famílias acompanharem a evolução. API em Spring Boot com autenticação JWT, PostgreSQL e Swagger.",
+        tags: ["Flutter", "Spring Boot", "PostgreSQL"],
+        url: "https://github.com/CarolineVantim/Sistema-Clinico",
       },
     ],
   },
@@ -399,7 +422,8 @@ const en: Dictionary = {
   projects: {
     title: "Projects & cases",
     subtitle:
-      "Highlights from my work in quality. More detailed cases (test plans, evidence, metrics) can be added here as they get documented.",
+      "Highlights from my work in quality and hands-on open-source projects.",
+    casesTitle: "In professional practice",
     items: [
       {
         title: "API test automation",
@@ -418,6 +442,24 @@ const en: Dictionary = {
         description:
           "Hands-on experience combining manual and API testing on web and mobile systems at ESL Sistemas, pairing N2 support knowledge with critical bug analysis.",
         tags: ["Manual Testing", "API Testing", "Bug Analysis"],
+      },
+    ],
+    reposTitle: "Projects on GitHub",
+    repoLinkLabel: "View repository",
+    repos: [
+      {
+        title: "Visual regression with BackstopJS",
+        description:
+          "POC to evaluate whether BackstopJS fits a squad with heavy visual validation. Beyond the app suite running in CI, I built a lab with 14 controlled changes to measure recall, precision and false alarms. Outcome: zero false positives, a recommendation to capture per component (9/11 regressions caught vs. 6/11 for full page), and a blind spot uncovered for subtle color changes.",
+        tags: ["BackstopJS", "Visual Regression", "Docker", "GitHub Actions"],
+        url: "https://github.com/CarolineVantim/Visual-Regression-Test",
+      },
+      {
+        title: "Clinical System",
+        description:
+          "App and API for an organization that supports children with physical and motor disabilities, centralizing sessions with photos and videos so families can follow their progress. Spring Boot API with JWT authentication, PostgreSQL and Swagger.",
+        tags: ["Flutter", "Spring Boot", "PostgreSQL"],
+        url: "https://github.com/CarolineVantim/Sistema-Clinico",
       },
     ],
   },
@@ -590,7 +632,8 @@ const it: Dictionary = {
   projects: {
     title: "Progetti & case study",
     subtitle:
-      "Punti salienti del mio lavoro nella qualità. Case study più dettagliati (piani di test, evidenze, metriche) potranno essere aggiunti qui man mano che verranno documentati.",
+      "Punti salienti del mio lavoro nella qualità e progetti pratici open source.",
+    casesTitle: "Nella pratica professionale",
     items: [
       {
         title: "Automazione dei test API",
@@ -609,6 +652,24 @@ const it: Dictionary = {
         description:
           "Esperienza pratica che unisce test manuali e di API su sistemi web e mobile presso ESL Sistemas, combinando la conoscenza del supporto N2 con l'analisi critica dei bug.",
         tags: ["Test Manuale", "Test API", "Analisi Bug"],
+      },
+    ],
+    reposTitle: "Progetti su GitHub",
+    repoLinkLabel: "Vedi repository",
+    repos: [
+      {
+        title: "Regressione visiva con BackstopJS",
+        description:
+          "POC per valutare se BackstopJS è adatto a una squad con molta validazione visiva. Oltre alla suite dell'applicazione in CI, ho costruito un laboratorio con 14 modifiche controllate per misurare recall, precisione e falsi allarmi. Risultato: zero falsi positivi, la raccomandazione di catturare per componente (9/11 regressioni rilevate contro 6/11 della pagina intera) e la scoperta di un punto cieco sulle variazioni sottili di colore.",
+        tags: ["BackstopJS", "Regressione Visiva", "Docker", "GitHub Actions"],
+        url: "https://github.com/CarolineVantim/Visual-Regression-Test",
+      },
+      {
+        title: "Sistema Clinico",
+        description:
+          "App e API per un'istituzione che assiste bambini con disabilità fisiche e motorie, centralizzando le sedute con foto e video affinché le famiglie possano seguirne i progressi. API Spring Boot con autenticazione JWT, PostgreSQL e Swagger.",
+        tags: ["Flutter", "Spring Boot", "PostgreSQL"],
+        url: "https://github.com/CarolineVantim/Sistema-Clinico",
       },
     ],
   },
