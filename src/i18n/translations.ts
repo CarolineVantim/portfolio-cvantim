@@ -17,7 +17,7 @@ export const localeNames: Record<Locale, string> = {
 export const contactInfo = {
   name: "Caroline Vantim",
   email: "cvantim@gmail.com",
-  phone: "+55 19 99499-3978",
+  phone: "+55 19 99044-3862",
   linkedin: "https://www.linkedin.com/in/caroline-vantim",
   github: "https://github.com/CarolineVantim",
   city: "Araras, São Paulo",
