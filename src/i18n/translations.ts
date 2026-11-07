@@ -23,7 +23,7 @@ export const contactInfo = {
   city: "Araras, São Paulo",
 };
 
-interface Dictionary {
+export interface Dictionary {
   meta: { title: string; description: string };
   nav: {
     sobre: string;
@@ -55,6 +55,7 @@ interface Dictionary {
   };
   experience: {
     title: string;
+    promotedLabel: string;
     jobs: {
       company: string;
       role: string;
@@ -146,6 +147,7 @@ const pt: Dictionary = {
   },
   experience: {
     title: "Experiência profissional",
+    promotedLabel: "Promoção",
     jobs: [
       {
         company: "Syonet",
@@ -324,6 +326,7 @@ const en: Dictionary = {
   },
   experience: {
     title: "Professional experience",
+    promotedLabel: "Promoted",
     jobs: [
       {
         company: "Syonet",
@@ -502,6 +505,7 @@ const it: Dictionary = {
   },
   experience: {
     title: "Esperienza professionale",
+    promotedLabel: "Promozione",
     jobs: [
       {
         company: "Syonet",
