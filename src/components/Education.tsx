@@ -1,31 +1,31 @@
 "use client";
 
 import { useLanguage } from "@/i18n/LanguageContext";
+import { Reveal, Section, SectionHeading } from "./ui";
 
 export default function Education() {
   const { t } = useLanguage();
 
   return (
-    <section id="formacao" className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="text-xs font-semibold uppercase tracking-widest text-accent">
-        {t.education.title}
-      </h2>
+    <Section id="formacao">
+      <SectionHeading index="05" label={t.nav.formacao} title={t.education.title} />
 
-      <ul className="mt-8 space-y-6">
+      <ul>
         {t.education.items.map((item) => (
-          <li
-            key={`${item.school}-${item.degree}`}
-            className="border-b border-border pb-6 last:border-none"
-          >
-            <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
-              <h3 className="text-lg font-semibold">{item.degree}</h3>
-              <span className="shrink-0 text-sm text-muted">{item.period}</span>
-            </div>
-            <p className="text-sm font-medium text-accent">{item.school}</p>
-            <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
+          <li key={`${item.school}-${item.degree}`}>
+            <Reveal className="group grid gap-4 border-t border-white/[0.08] py-10 md:grid-cols-[160px_1fr] md:gap-12">
+              <span className="font-mono text-xs uppercase tracking-wider text-muted md:pt-2">{item.period}</span>
+              <div>
+                <h3 className="text-2xl font-light tracking-tight transition-colors group-hover:text-accent sm:text-[1.7rem]">
+                  {item.degree}
+                </h3>
+                <p className="mt-2 font-serif text-lg italic text-accent/90">{item.school}</p>
+                <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted">{item.description}</p>
+              </div>
+            </Reveal>
           </li>
         ))}
       </ul>
-    </section>
+    </Section>
   );
 }

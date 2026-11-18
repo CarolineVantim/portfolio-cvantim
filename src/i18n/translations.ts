@@ -34,6 +34,7 @@ export interface Dictionary {
     contato: string;
   };
   hero: {
+    status: string;
     greeting: string;
     headline: string;
     country: string;
@@ -84,14 +85,14 @@ export interface Dictionary {
     linkedinLabel: string;
     githubLabel: string;
   };
-  footer: { rights: string };
+  footer: { rights: string; backToTop: string };
 }
 
 const pt: Dictionary = {
   meta: {
     title: "Caroline Vantim — QA Engineer",
     description:
-      "Portfólio de Caroline Vantim, QA Analyst especializada em automação de testes, API testing e Shift Left.",
+      "Portfólio de Caroline Vantim, QA Analyst especializada em automação de testes com IA, API testing e Shift Left.",
   },
   nav: {
     sobre: "Sobre",
@@ -102,8 +103,9 @@ const pt: Dictionary = {
     contato: "Contato",
   },
   hero: {
+    status: "Aberta a novas oportunidades",
     greeting: "Olá, eu sou a ",
-    headline: "QA Analyst | Quality Assurance Engineer | Test Automation | API Testing | PHP & Go",
+    headline: "QA Analyst | Quality Assurance Engineer | AI-Assisted Test Automation | API Testing | PHP & Go",
     country: "Brasil",
     ctaPrimary: "Ver trajetória",
     ctaSecondary: "Falar comigo",
@@ -113,12 +115,12 @@ const pt: Dictionary = {
     paragraphs: [
       "Sou a Caroline, QA Engineer com foco em garantir software de alta qualidade através de estratégias eficientes de testes manuais, automatizados e integração contínua. Tenho experiência prática em testes de aplicações Web, Mobile e APIs REST, além de atuação direta na definição de fluxos de teste e melhoria de processos de qualidade em times ágeis.",
       "Minha bagagem prévia como desenvolvedora (PHP e Golang) me dá um perfil técnico e analítico apurado: entendo a arquitetura, analiso o código e sei exatamente onde o software tende a falhar, o que facilita a comunicação com os times de engenharia.",
-      "No dia a dia, trabalho com foco em Shift Left: mapeio regras de negócio e antecipo cenários de falha desde as fases iniciais do desenvolvimento, para que os problemas sejam evitados, e não apenas encontrados. Desenvolvo e mantenho testes automatizados na camada de API e produzo documentação técnica e funcional que serve de referência para os times de produto e engenharia.",
+      "No dia a dia, trabalho com foco em Shift Left: mapeio regras de negócio e antecipo cenários de falha desde as fases iniciais do desenvolvimento, para que os problemas sejam evitados, e não apenas encontrados. Desenvolvo e mantenho testes automatizados na camada de API e produzo documentação técnica e funcional que serve de referência para os times de produto e engenharia. Na automação, uso assistentes de IA como parte do meu fluxo para escrever, refatorar e manter suítes de teste com mais velocidade, sempre com revisão crítica de cada teste gerado.",
     ],
     stats: [
       { value: "6+", label: "anos de mercado de TI" },
       { value: "Suporte → Dev → QA", label: "trajetória de carreira" },
-      { value: "API & Automação", label: "foco atual" },
+      { value: "IA & Automação", label: "foco atual" },
     ],
   },
   skills: {
@@ -132,6 +134,7 @@ const pt: Dictionary = {
           "Shift Left",
           "Teste Manual (Web e Mobile)",
           "Automação de Testes",
+          "Automação de Testes com IA",
           "Análise e Reporte de Bugs",
           "CI/CD",
         ],
@@ -155,7 +158,7 @@ const pt: Dictionary = {
     jobs: [
       {
         company: "Syonet",
-        role: "Analista de Teste Junior",
+        role: "Analista de Teste Júnior",
         period: "maio de 2025 — atual",
         location: "Rio Grande do Sul, Brasil",
         highlights: [
@@ -224,7 +227,7 @@ const pt: Dictionary = {
       {
         title: "Cultura de Shift Left",
         description:
-          "Introdução de práticas de teste nas fases iniciais do ciclo de desenvolvimento, junto ao time de produto e engenharia, prevenindo falhas antes que cheguem a produção.",
+          "Introdução de práticas de teste nas fases iniciais do ciclo de desenvolvimento, junto ao time de produto e engenharia, prevenindo falhas antes que cheguem à produção.",
         tags: ["Shift Left", "Processos", "Qualidade"],
       },
       {
@@ -292,16 +295,16 @@ const pt: Dictionary = {
     subtitle:
       "Estou aberta a oportunidades em QA, automação de testes e times de engenharia que valorizam qualidade desde o início do ciclo.",
     linkedinLabel: "LinkedIn",
-    githubLabel: "Github",
+    githubLabel: "GitHub",
   },
-  footer: { rights: "Todos os direitos reservados." },
+  footer: { rights: "Todos os direitos reservados.", backToTop: "Topo" },
 };
 
 const en: Dictionary = {
   meta: {
     title: "Caroline Vantim — QA Engineer",
     description:
-      "Portfolio of Caroline Vantim, QA Analyst specialized in test automation, API testing and Shift Left.",
+      "Portfolio of Caroline Vantim, QA Analyst specialized in AI-assisted test automation, API testing and Shift Left.",
   },
   nav: {
     sobre: "About",
@@ -312,8 +315,9 @@ const en: Dictionary = {
     contato: "Contact",
   },
   hero: {
+    status: "Open to new opportunities",
     greeting: "Hi, I'm ",
-    headline: "QA Analyst | Quality Assurance Engineer | Test Automation | API Testing | PHP & Go",
+    headline: "QA Analyst | Quality Assurance Engineer | AI-Assisted Test Automation | API Testing | PHP & Go",
     country: "Brazil",
     ctaPrimary: "See my journey",
     ctaSecondary: "Get in touch",
@@ -323,12 +327,12 @@ const en: Dictionary = {
     paragraphs: [
       "I'm Caroline, a QA Engineer focused on ensuring high-quality software through efficient manual testing, automation, and continuous integration strategies. I have hands-on experience testing Web, Mobile, and REST API applications, as well as direct involvement in defining test flows and improving quality processes within agile teams.",
       "My previous background as a developer (PHP and Golang) gives me a sharp technical and analytical mindset: I understand the architecture, analyze the code, and know exactly where software tends to fail — which makes communication with engineering teams much easier.",
-      "Day to day, I work with a Shift Left mindset: I map business rules and anticipate failure scenarios from the earliest stages of development, so problems are prevented rather than just found. I build and maintain automated tests at the API layer and produce technical and functional documentation that serves as a reference for product and engineering teams.",
+      "Day to day, I work with a Shift Left mindset: I map business rules and anticipate failure scenarios from the earliest stages of development, so problems are prevented rather than just found. I build and maintain automated tests at the API layer and produce technical and functional documentation that serves as a reference for product and engineering teams. In automation, I use AI assistants as part of my workflow to write, refactor and maintain test suites faster, always with a critical review of every generated test.",
     ],
     stats: [
       { value: "6+", label: "years in the IT industry" },
       { value: "Support → Dev → QA", label: "career journey" },
-      { value: "API & Automation", label: "current focus" },
+      { value: "AI & Automation", label: "current focus" },
     ],
   },
   skills: {
@@ -342,6 +346,7 @@ const en: Dictionary = {
           "Shift Left",
           "Manual Testing (Web & Mobile)",
           "Test Automation",
+          "AI-Assisted Test Automation",
           "Bug Analysis & Reporting",
           "CI/CD",
         ],
@@ -498,20 +503,20 @@ const en: Dictionary = {
   },
   contact: {
     title: "Contact",
-    heading: "Let's talk about software quality?",
+    heading: "Shall we talk about software quality?",
     subtitle:
       "I'm open to opportunities in QA, test automation and engineering teams that value quality from the very start of the cycle.",
     linkedinLabel: "LinkedIn",
-    githubLabel: "Github",
+    githubLabel: "GitHub",
   },
-  footer: { rights: "All rights reserved." },
+  footer: { rights: "All rights reserved.", backToTop: "Top" },
 };
 
 const it: Dictionary = {
   meta: {
     title: "Caroline Vantim — QA Engineer",
     description:
-      "Portfolio di Caroline Vantim, QA Analyst specializzata in automazione dei test, API testing e Shift Left.",
+      "Portfolio di Caroline Vantim, QA Analyst specializzata in automazione dei test con IA, API testing e Shift Left.",
   },
   nav: {
     sobre: "Chi sono",
@@ -522,8 +527,9 @@ const it: Dictionary = {
     contato: "Contatti",
   },
   hero: {
+    status: "Aperta a nuove opportunità",
     greeting: "Ciao, sono ",
-    headline: "QA Analyst | Quality Assurance Engineer | Test Automation | API Testing | PHP & Go",
+    headline: "QA Analyst | Quality Assurance Engineer | AI-Assisted Test Automation | API Testing | PHP & Go",
     country: "Brasile",
     ctaPrimary: "Vedi il mio percorso",
     ctaSecondary: "Contattami",
@@ -533,12 +539,12 @@ const it: Dictionary = {
     paragraphs: [
       "Sono Caroline, una QA Engineer concentrata nel garantire software di alta qualità attraverso strategie efficienti di test manuali, automatizzati e integrazione continua. Ho esperienza pratica nei test di applicazioni Web, Mobile e API REST, oltre a un coinvolgimento diretto nella definizione dei flussi di test e nel miglioramento dei processi di qualità in team agili.",
       "La mia precedente esperienza come sviluppatrice (PHP e Golang) mi offre un profilo tecnico e analitico solido: comprendo l'architettura, analizzo il codice e so esattamente dove il software tende a fallire, il che facilita la comunicazione con i team di ingegneria.",
-      "Nel lavoro quotidiano adotto un approccio Shift Left: mappo le regole di business e anticipo gli scenari di errore fin dalle prime fasi dello sviluppo, così che i problemi vengano prevenuti e non solo individuati. Sviluppo e mantengo test automatizzati a livello di API e produco documentazione tecnica e funzionale che fa da riferimento per i team di prodotto e ingegneria.",
+      "Nel lavoro quotidiano adotto un approccio Shift Left: mappo le regole di business e anticipo gli scenari di errore fin dalle prime fasi dello sviluppo, così che i problemi vengano prevenuti e non solo individuati. Sviluppo e mantengo test automatizzati a livello di API e produco documentazione tecnica e funzionale che fa da riferimento per i team di prodotto e ingegneria. Nell'automazione uso assistenti di IA come parte del mio flusso di lavoro per scrivere, rifattorizzare e mantenere le suite di test più rapidamente, sempre con una revisione critica di ogni test generato.",
     ],
     stats: [
       { value: "6+", label: "anni nel settore IT" },
       { value: "Supporto → Sviluppo → QA", label: "percorso di carriera" },
-      { value: "API & Automazione", label: "focus attuale" },
+      { value: "IA & Automazione", label: "focus attuale" },
     ],
   },
   skills: {
@@ -552,6 +558,7 @@ const it: Dictionary = {
           "Shift Left",
           "Test Manuale (Web e Mobile)",
           "Automazione dei Test",
+          "Automazione dei Test con IA",
           "Analisi e Segnalazione Bug",
           "CI/CD",
         ],
@@ -712,9 +719,9 @@ const it: Dictionary = {
     subtitle:
       "Sono aperta a opportunità in QA, automazione dei test e team di ingegneria che valorizzano la qualità fin dall'inizio del ciclo.",
     linkedinLabel: "LinkedIn",
-    githubLabel: "Github",
+    githubLabel: "GitHub",
   },
-  footer: { rights: "Tutti i diritti riservati." },
+  footer: { rights: "Tutti i diritti riservati.", backToTop: "Inizio" },
 };
 
 export const dictionaries: Record<Locale, Dictionary> = { pt, en, it };

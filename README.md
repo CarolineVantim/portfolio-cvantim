@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Caroline Vantim — Portfólio
 
-## Getting Started
+Portfólio pessoal de QA Engineer, com foco em automação de testes assistida por IA, API testing e Shift Left.
 
-First, run the development server:
+🔗 **https://portfolio-cvantim.vercel.app**
+
+## Destaques
+
+- **3 idiomas** (português, inglês e italiano): detecta o idioma do navegador na primeira visita e lembra a escolha do visitante.
+- **Conteúdo centralizado** em [`src/i18n/translations.ts`](src/i18n/translations.ts): para editar textos, experiências ou projetos, basta mexer nesse arquivo; os componentes só renderizam.
+- **Promoções agrupadas automaticamente**: cargos consecutivos na mesma empresa aparecem juntos, com selo de promoção.
+- **Acessível**: respeita `prefers-reduced-motion`, atualiza o `lang` da página ao trocar de idioma e funciona sem JavaScript.
+- **Prévia para redes sociais** (Open Graph) ao compartilhar o link.
+
+## Stack
+
+- [Next.js](https://nextjs.org) (App Router) + React + TypeScript
+- Tailwind CSS 4
+- Fontes Manrope e Instrument Serif via `next/font`
+- Deploy na Vercel
+
+## Rodando localmente
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev       # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Antes de subir:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Estrutura
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+  app/            layout, página, estilos globais, ícones e imagem de prévia
+  components/     uma seção por arquivo (Hero, About, Experience, Projects...)
+  components/ui   blocos compartilhados (Section, SectionHeading, Reveal)
+  data/photos.ts  fotos exibidas no "Sobre" (arquivos em public/photos)
+  i18n/           textos dos 3 idiomas e contexto de idioma
+```

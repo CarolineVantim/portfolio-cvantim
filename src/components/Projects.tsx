@@ -1,17 +1,13 @@
 "use client";
 
 import { useLanguage } from "@/i18n/LanguageContext";
+import { ArrowUpRight, Reveal, Section, SectionHeading } from "./ui";
 
 function Tags({ tags }: { tags: string[] }) {
   return (
-    <div className="mt-4 flex flex-wrap gap-2">
+    <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-[11px] uppercase tracking-[0.18em] text-accent/80">
       {tags.map((tag) => (
-        <span
-          key={tag}
-          className="rounded-full bg-accent/10 px-2.5 py-1 text-xs font-medium text-accent"
-        >
-          {tag}
-        </span>
+        <span key={tag}>{tag}</span>
       ))}
     </div>
   );
@@ -29,55 +25,56 @@ export default function Projects() {
   const { t } = useLanguage();
 
   return (
-    <section id="projetos" className="border-t border-border bg-surface">
-      <div className="mx-auto max-w-5xl px-6 py-16">
-        <h2 className="text-xs font-semibold uppercase tracking-widest text-accent">
-          {t.projects.title}
-        </h2>
-        <p className="mt-2 max-w-2xl text-sm text-muted">{t.projects.subtitle}</p>
+    <Section id="projetos">
+      <SectionHeading index="03" label={t.nav.projetos} title={t.projects.title} />
+      <Reveal>
+        <p className="-mt-8 mb-16 max-w-2xl text-base leading-relaxed text-muted">{t.projects.subtitle}</p>
+      </Reveal>
 
-        <h3 className="mt-10 text-sm font-semibold text-muted">{t.projects.casesTitle}</h3>
-        <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {t.projects.items.map((project) => (
-            <article
-              key={project.title}
-              className="flex flex-col rounded-2xl border border-border bg-background p-6"
-            >
-              <h4 className="text-base font-semibold">{project.title}</h4>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-                {project.description}
-              </p>
-              <Tags tags={project.tags} />
-            </article>
-          ))}
-        </div>
-
-        <h3 className="mt-12 text-sm font-semibold text-muted">{t.projects.reposTitle}</h3>
-        <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {t.projects.repos.map((repo) => (
+      <Reveal>
+        <h3 className="mb-6 text-xs uppercase tracking-[0.3em] text-muted">{t.projects.reposTitle}</h3>
+      </Reveal>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {t.projects.repos.map((repo, i) => (
+          <Reveal key={repo.url} delay={i * 120} className="h-full">
             <a
-              key={repo.url}
               href={repo.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col rounded-2xl border border-border bg-background p-6 transition-colors hover:border-accent/60"
+              className="lux-card group flex h-full flex-col p-8 sm:p-10"
             >
-              <h4 className="text-base font-semibold">{repo.title}</h4>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-                {repo.description}
-              </p>
+              <div className="flex items-start justify-between gap-6">
+                <h4 className="text-2xl font-light tracking-tight sm:text-3xl">{repo.title}</h4>
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full ring-1 ring-white/10 transition-all duration-500 group-hover:bg-accent group-hover:text-accent-foreground group-hover:ring-accent">
+                  <ArrowUpRight />
+                </span>
+              </div>
+              <p className="mt-5 flex-1 text-[15px] leading-relaxed text-muted">{repo.description}</p>
               <Tags tags={repo.tags} />
-              <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent">
+              <span className="mt-8 inline-flex items-center gap-2 border-t border-white/[0.06] pt-6 text-sm text-muted transition-colors group-hover:text-foreground">
                 <GitHubIcon />
                 {t.projects.repoLinkLabel}
-                <span aria-hidden className="transition-transform group-hover:translate-x-1">
-                  →
-                </span>
               </span>
             </a>
-          ))}
-        </div>
+          </Reveal>
+        ))}
       </div>
-    </section>
+
+      <Reveal>
+        <h3 className="mb-6 mt-24 text-xs uppercase tracking-[0.3em] text-muted">{t.projects.casesTitle}</h3>
+      </Reveal>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        {t.projects.items.map((project, i) => (
+          <Reveal key={project.title} delay={i * 120} className="h-full">
+            <article className="lux-card flex h-full flex-col p-8">
+              <span className="font-serif text-4xl italic text-accent/70">0{i + 1}</span>
+              <h4 className="mt-6 text-xl font-light tracking-tight">{project.title}</h4>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{project.description}</p>
+              <Tags tags={project.tags} />
+            </article>
+          </Reveal>
+        ))}
+      </div>
+    </Section>
   );
 }
